@@ -1,3 +1,5 @@
+import constants
+
 def pad(data, size):
     if len(data) >= size:
         return data
@@ -13,7 +15,7 @@ class Hash:
             
             value (bytes, optional): a 32-byte value of the hash object. Defaults to None.
         """        
-        self.size = 32
+        self.size = constants.HASH_SIZE
         if value:
             assert len(value) == self.size
             self.value = value
